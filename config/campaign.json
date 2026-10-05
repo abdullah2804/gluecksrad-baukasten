@@ -1,0 +1,109 @@
+{
+  "kampagne": {
+    "id": "demo-herbst-2026",
+    "name": "Herbst-Gewinnspiel 2026 (Demo)",
+    "start": "2026-01-01T00:00:00+01:00",
+    "ende": "2027-12-31T23:59:59+01:00",
+    "testmodus": true
+  },
+
+  "texte": {
+    "seitentitel": "Dreh am Glücksrad – Musterfirma",
+    "ueberschrift": "Dreh am Glücksrad!",
+    "unterzeile": "Mitmachen, Rad drehen und sofort erfahren, ob du gewonnen hast.",
+    "formularHinweis": "Schritt 1: Melde dich hier zum Gewinnspiel an.",
+    "radGesperrt": "Schritt 2: Nach deiner Anmeldung wird das Rad freigeschaltet.",
+    "radFreigeschaltet": "Du bist dabei! Jetzt das Rad drehen.",
+    "drehenKnopf": "Rad drehen",
+    "drehtGerade": "Das Rad dreht sich …",
+    "vorStart": "Das Gewinnspiel startet am {start}. Schau dann wieder vorbei!",
+    "nachEnde": "Das Gewinnspiel ist leider beendet. Vielen Dank für dein Interesse!",
+    "bereitsGespielt": "Mit dieser Teilnahme wurde bereits gedreht. Pro Teilnahme ist nur ein Dreh möglich.",
+    "ungueltigeTeilnahme": "Deine Teilnahme konnte nicht bestätigt werden. Bitte melde dich erneut an.",
+    "fehler": "Da ist leider etwas schiefgelaufen. Bitte versuche es in einem Moment noch einmal.",
+    "fusszeile": "© 2026 Musterfirma GmbH · Teilnahme ab 18 Jahren · Keine Barauszahlung",
+    "impressumLink": "https://example.com/impressum",
+    "datenschutzLink": "https://example.com/datenschutz",
+    "teilnahmebedingungenLink": "https://example.com/teilnahmebedingungen"
+  },
+
+  "ergebnisse": {
+    "niete": {
+      "ueberschrift": "Schade!",
+      "text": "Diesmal hat es leider nicht geklappt. Danke fürs Mitmachen!",
+      "bild": "assets/ergebnis-niete.svg",
+      "knopfText": "Schließen",
+      "knopfLink": ""
+    },
+    "sofortgewinn": {
+      "ueberschrift": "Glückwunsch!",
+      "text": "Du hast gewonnen: {gewinn}. Wir schicken dir deinen Gewinn per E-Mail.",
+      "bild": "assets/ergebnis-gewinn.svg",
+      "knopfText": "Super!",
+      "knopfLink": ""
+    },
+    "grossgewinn": {
+      "ueberschrift": "WOW – der Hauptgewinn!",
+      "text": "Unglaublich: Du hast {gewinn} gewonnen! Wir melden uns in Kürze persönlich bei dir.",
+      "bild": "assets/ergebnis-hauptgewinn.svg",
+      "knopfText": "Juhu!",
+      "knopfLink": ""
+    }
+  },
+
+  "design": {
+    "farben": {
+      "primaer": "#e8590c",
+      "sekundaer": "#5c2d91",
+      "hintergrund": "#fff4e6",
+      "text": "#2b2118",
+      "knopf": "#e8590c",
+      "knopfText": "#ffffff",
+      "radRand": "#5c2d91",
+      "zeiger": "#5c2d91",
+      "karte": "#ffffff"
+    },
+    "schriften": {
+      "ueberschrift": {
+        "name": "Baloo 2",
+        "url": "https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap"
+      },
+      "text": {
+        "name": "Nunito",
+        "url": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      }
+    },
+    "logo": "assets/logo.svg",
+    "hintergrundbild": "assets/hintergrund.svg",
+    "favicon": "assets/favicon.svg"
+  },
+
+  "rad": {
+    "drehdauerSekunden": 6,
+    "beschriftungAnzeigen": true,
+    "konfettiBeiGewinn": true
+  },
+
+  "integration": {
+    "formularDatei": "assets/formular-einbettung.html",
+    "erfolgsEreignis": "teilnahme-erfolgreich",
+    "idFeld": "teilnahmeId",
+    "erlaubteHerkunft": [],
+    "urlParameter": ""
+  },
+
+  "teilnahme": {
+    "idMuster": "^[A-Za-z0-9_-]{4,64}$"
+  },
+
+  "segmente": [
+    { "id": "hauptgewinn", "label": "E-Bike",          "typ": "grossgewinn",  "gewicht": 1,   "kontingent": 1,    "farbe": "#5c2d91", "textfarbe": "#ffffff", "bild": "assets/segmente/ebike.svg" },
+    { "id": "niete-1",     "label": "Leider nicht",    "typ": "niete",        "gewicht": 400, "kontingent": null, "farbe": "#ffe8cc", "textfarbe": "#2b2118", "bild": "" },
+    { "id": "gutschein-10","label": "10 € Gutschein",  "typ": "sofortgewinn", "gewicht": 150, "kontingent": 500,  "farbe": "#e8590c", "textfarbe": "#ffffff", "bild": "assets/segmente/gutschein.svg" },
+    { "id": "niete-2",     "label": "Knapp daneben",   "typ": "niete",        "gewicht": 400, "kontingent": null, "farbe": "#fff4e6", "textfarbe": "#2b2118", "bild": "" },
+    { "id": "becher",      "label": "Kaffeebecher",    "typ": "sofortgewinn", "gewicht": 100, "kontingent": 200,  "farbe": "#f59f00", "textfarbe": "#2b2118", "bild": "assets/segmente/becher.svg" },
+    { "id": "niete-3",     "label": "Leider nicht",    "typ": "niete",        "gewicht": 400, "kontingent": null, "farbe": "#ffe8cc", "textfarbe": "#2b2118", "bild": "" },
+    { "id": "gutschein-5", "label": "5 € Gutschein",   "typ": "sofortgewinn", "gewicht": 250, "kontingent": 1000, "farbe": "#d9480f", "textfarbe": "#ffffff", "bild": "assets/segmente/gutschein.svg" },
+    { "id": "niete-4",     "label": "Nächstes Mal",    "typ": "niete",        "gewicht": 400, "kontingent": null, "farbe": "#fff4e6", "textfarbe": "#2b2118", "bild": "" }
+  ]
+}

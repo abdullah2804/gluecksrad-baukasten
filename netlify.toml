@@ -1,0 +1,25 @@
+# Netlify-Einstellungen – müssen pro Kampagne NICHT geändert werden.
+
+[build]
+  command = "npm run bauen"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Sicherheits-Header für alle Seiten
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Konfiguration nie zwischenspeichern, damit Änderungen sofort live sind
+[[headers]]
+  for = "/kampagne.json"
+  [headers.values]
+    Cache-Control = "no-cache"

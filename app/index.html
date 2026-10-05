@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Glücksrad</title>
+  <link rel="icon" id="favicon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<!--
+  Diese Datei muss pro Kampagne NICHT geändert werden.
+  Texte, Farben, Schriften und Bilder kommen aus config/campaign.json und dem Ordner assets/.
+-->
+<body class="laedt">
+  <div class="testmodus-banner" id="testmodus-banner" hidden>Testmodus – Ergebnisse zählen nicht</div>
+
+  <div class="seite">
+    <header class="kopf">
+      <img id="logo" class="logo" alt="" hidden>
+    </header>
+
+    <main class="haupt">
+      <section class="intro">
+        <h1 id="ueberschrift"></h1>
+        <p id="unterzeile"></p>
+      </section>
+
+      <section class="karte hinweis-karte" id="zeitraum-hinweis" hidden>
+        <p id="zeitraum-text"></p>
+      </section>
+
+      <div class="inhalt" id="spielbereich" hidden>
+        <section class="karte formular-karte" id="formular-bereich" aria-labelledby="formular-hinweis">
+          <p class="schritt" id="formular-hinweis"></p>
+          <div id="formular-einbettung"></div>
+          <div id="demo-formular"></div>
+        </section>
+
+        <section class="karte rad-karte" id="rad-bereich" aria-label="Glücksrad">
+          <p class="rad-status" id="rad-status" aria-live="polite"></p>
+          <div class="rad-buehne gesperrt" id="rad-buehne">
+            <canvas id="rad" role="img" aria-label="Glücksrad"></canvas>
+            <div class="zeiger" id="zeiger" aria-hidden="true"></div>
+            <div class="schloss" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="40" height="40"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 5a3 3 0 1 1 6 0v3H9V7Zm3 7a2 2 0 0 1 1 3.73V19h-2v-1.27A2 2 0 0 1 12 14Z"/></svg>
+            </div>
+          </div>
+          <button type="button" class="knopf drehen-knopf" id="drehen-knopf" disabled></button>
+        </section>
+      </div>
+    </main>
+
+    <footer class="fuss">
+      <p id="fusszeile"></p>
+      <nav class="fuss-links" id="fuss-links" aria-label="Rechtliches"></nav>
+    </footer>
+  </div>
+
+  <div class="ergebnis-huelle" id="ergebnis" hidden>
+    <div class="ergebnis-karte" role="dialog" aria-modal="true" aria-labelledby="ergebnis-ueberschrift">
+      <img class="ergebnis-bild" id="ergebnis-bild" alt="" hidden>
+      <h2 id="ergebnis-ueberschrift"></h2>
+      <p id="ergebnis-text"></p>
+      <a class="knopf" id="ergebnis-knopf" href="#"></a>
+    </div>
+  </div>
+
+  <canvas class="konfetti" id="konfetti" aria-hidden="true"></canvas>
+
+  <div class="lade-anzeige" id="lade-anzeige" aria-live="polite">
+    <div class="lade-kreis"></div>
+  </div>
+
+  <noscript><p class="noscript">Bitte aktivieren Sie JavaScript, um am Gewinnspiel teilzunehmen.</p></noscript>
+</body>
+</html>

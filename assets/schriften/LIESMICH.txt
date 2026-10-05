@@ -1,0 +1,7 @@
+Eigene Schriftdateien (z. B. .woff2) können hier abgelegt werden.
+
+In config/campaign.json dann zum Beispiel:
+  "ueberschrift": { "name": "Meine Schrift", "url": "assets/schriften/meine-schrift.woff2" }
+
+Alternativ eine Google-Fonts-Adresse eintragen (wie im Demo-Beispiel).
+Bitte die Lizenz der Schrift beachten (Einbettung im Web muss erlaubt sein).

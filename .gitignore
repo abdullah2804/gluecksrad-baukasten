@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.lokale-daten/
+.netlify/
+.DS_Store

@@ -1,0 +1,21 @@
+{
+  "name": "gluecksrad-baukasten",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wiederverwendbarer Glücksrad-Baukasten für Gewinnspiel-Promotions (Netlify)",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "scripts": {
+    "start": "node scripts/testserver.mjs",
+    "pruefen": "node scripts/pruefen.mjs",
+    "simulieren": "node scripts/simulieren.mjs",
+    "zuruecksetzen": "node scripts/zuruecksetzen.mjs",
+    "bauen": "node scripts/bauen.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.3"
+  }
+}
